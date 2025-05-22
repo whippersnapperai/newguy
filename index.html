@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual Calorie Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // Light Theme
+            'light-background': '#f8f9fa', // Very light gray
+            'light-surface': '#ffffff',    // White
+            'light-text-primary': '#212529', // Dark gray for primary text
+            'light-text-secondary': '#6c757d', // Medium gray for secondary text
+            'light-primary': '#0d6efd', // Bootstrap Blue
+            'light-primary-hover': '#0b5ed7',
+            'light-accent': '#6ea8fe', // Lighter blue for accents
+            'light-border': '#dee2e6', // Light gray for borders
+            'light-danger': '#dc3545', // Bootstrap Red
+            'light-danger-hover': '#bb2d3b',
+            'light-warning': '#ffc107', // Bootstrap Yellow
+
+            // Dark Theme
+            'dark-background': '#121212', // Very dark gray
+            'dark-surface': '#1e1e1e',    // Slightly lighter dark gray
+            'dark-text-primary': '#e9ecef',   // Light gray for primary text
+            'dark-text-secondary': '#adb5bd', // Medium gray for secondary text
+            'dark-primary': '#4dabf7', // Lighter blue for dark mode
+            'dark-primary-hover': '#3690f5',
+            'dark-accent': '#74c0fc',   // Brighter blue for accents
+            'dark-border': '#495057',   // Dark gray for borders
+            'dark-danger': '#f16c77',   // Lighter red for dark mode
+            'dark-danger-hover': '#e74c59',
+            'dark-warning': '#ffd34f',  // Lighter yellow for dark mode
+          },
+          boxShadow: {
+            'card': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03)',
+            'card-hover': '0 4px 12px -1px rgba(0, 0, 0, 0.07), 0 2px 8px -2px rgba(0, 0, 0, 0.04)',
+            'modal': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -6px rgba(0, 0, 0, 0.1)',
+            'nav': '0 2px 4px rgba(0,0,0,0.05)'
+          },
+          borderRadius: {
+            'lg': '0.5rem',  // 8px
+            'xl': '0.75rem', // 12px
+            '2xl': '1rem',   // 16px
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1"
+  }
+}
+</script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="bg-light-background dark:bg-dark-background">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
