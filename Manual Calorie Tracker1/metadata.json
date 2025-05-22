@@ -1,0 +1,5 @@
+{
+  "name": "Manual Calorie Tracker",
+  "description": "A web application for manually logging meals, tracking daily calorie limits, and displaying remaining calories. Uses Tailwind CSS for styling and localStorage for data persistence.",
+  "requestFramePermissions": []
+}
